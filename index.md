@@ -2,7 +2,7 @@
 
 
 
-=== Introduction ===
+<h2> Introduction </h2>
 
 Popular legacy based security models these days, including the VPN, run on the principle of trusting “inside the network” users and assets by default. With the fast adaptation of hybrid users & remote working norms, the authentication of users can be easily compromised, making conventional security models highly vulnerable. 
 
