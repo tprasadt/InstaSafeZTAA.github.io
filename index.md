@@ -10,35 +10,36 @@ Therefore, There is a need for a system that reimagines network security as we k
 
  The documentation covers the Zero Trust solution and a detailed explanation of the administrator and the user perspective.
 
-What is Zero Trust?
+<h2> What is Zero Trust?</h2>
 
 Zero Trust is a security model that doesn't trust any entity, whether inside or outside the network. Unlike traditional security systems which follow the 'Trust but verify' approach, Zero Trust Models follow a 'Never Trust, always verify' approach, using strict access control policies and constant monitoring to secure enterprise networks from malware and other security threats. Zero trust ensures that each and every user and their devices are validated and given the least required access on a “need to know” basis. It also involves continuous monitoring of current users to identify malicious behaviour and revoke access accordingly.
 
 Traditional network centric security systems grant more trust than required, which can be exploited.
 
 
-Zero Trust Models
+<h2>Zero Trust Models </h2>
 
 Keeping in mind about the above principles of Zero Trust, Companies have implemented Zero Trust into their products in two different ways
 
-Client Initiated Zero Trust Access
+<h3>Client Initiated Zero Trust Access </h3>
 This model uses the Software Defined Perimeter as proposed by the Cloud Security Alliance as its inspiration. This model includes the use of an “Agent” which resides on the client’s machines and connects the client to  the required resource after performing necessary security checks and validations defined by the company operating the Zero Trust Network.
 Such a model can be used to access company resources in private networks  and cloud hosted services securely from anywhere in the world. 
 Examples of client-initiated solutions are InstaSafe’s Zero Trust Application Access (ZTAA) and Zero Trust Network Access (ZTNA).
 
 <pic>
 
-Service Initiated Zero Trust Access
+<h3> Service Initiated Zero Trust Access </h3>
+	
 This model implements Zero Trust using a reverse proxy architecture. It is based on Google’s Zero Trust Implementation called BeyondCorp. It uses the browser to validate the user and  establish a tunnel between the client and server eliminating the need for an agent to be installed and maintained on enterprise devices. However, The access is limited to cloud hosted services as it only supports protocols like HTTP/HTTPs due to its reliance on the browser and has limited support for other protocols.
 Examples of client-initiated solutions are Google’s BeyondCorp InstaSafe’s Agentless Gateway
 <pic>
 
-InstaSafe’s Zero Trust Products
+<h2>InstaSafe’s Zero Trust Products</h2>
 
 InstaSafe offers two different Zero Trust based remote access solutions
 
 
-InstaSafe Zero Trust Application Access (ZTAA)
+<h3>InstaSafe Zero Trust Application Access (ZTAA) </h3>
 
 Instasafe’s ZTAA is based on the Client-Gateway model in Software Defined Perimeter specification as proposed by the  Cloud Security Alliance (CSA) . The design follows the rules put forward by NIST as well. It is a client-initiated ZTNA solution which creates a secure tunnel between the client and the server with additional  features like Multi-Factor Authentication and integration with SAML for third party applications. 
 
@@ -49,7 +50,7 @@ Link: <website>
 
 
 
-InstaSafe Zero Trust Network Access (ZTNA)
+<h3>InstaSafe Zero Trust Network Access (ZTNA)</h3>
 
 InstaSafe’s ZTNA is also a client-initiated ZTNA solution which instead of connecting a client to an application connects the client to a network via a fast and secure tunnel. It also includes features like Multi-Factor Authentication and device profiling and validation similar to ZTAA.
 Link: <website>
@@ -57,15 +58,15 @@ Link: <website>
 
 
 
-Architecture
+<h2>Architecture</h2>
 
 Zero Trust Application Access -  Application in DMZ
 
-Overview 
+<h3>Overview </h3>
 
 The architecture is based on the Client-Gateway model as detailed in the CSA architecture guide for SDP .
 
-Components
+<h3>Components</h3>
 
 The primary components of the ZTAA include the Client,  Controller,  Gateway and the IT resources of the organisation. 
 
@@ -96,12 +97,12 @@ On successful validation of the client’s access request, a mTLS tunnel is esta
 	
 
 
-Zero Trust Application Access -  Third Party Applications (SAML based)
-Overview 
+<h2>Zero Trust Application Access -  Third Party Applications (SAML based)</h2>
+<h3>Overview </h3>
 
 The architecture is based on the interaction between a SAML Service Provider and SAML Identity Provider with the additional layers of security that come with using the Zero Trust Platform.
 
-Components
+<h3>Components</h3>
 The primary components of the SAML based ZTNA access include a Client, a Controller, a Gateway and the resources. 
 
 Clients are devices that are in the hands of users who wish to access resources which are secured by  ZTAA. Laptops, Desktops, Mobile phones are examples of such clients. An agent or the web browser can be used to access applications of this type
@@ -117,7 +118,7 @@ It receives and validates the SAML Response sent by the Identity Provider. On su
 SAML Identity Provider (IdP) is a component of Zero Trust Platform which provides authentication identities of users within the system to third party applications to enable Single Sign On into those applications.
 
 
-Authentication Flows
+<h2>Authentication Flows</h2>
 
 SAML Single Sign On (SAML SSO) has two authentication flows which allow developers to use the flow more suitable to their business requirements.
 IdP Initiated ( Identity Provider Initiated)
@@ -150,13 +151,13 @@ The visualization of the above flow can be seen in the following figure
  
 
 
-Zero Trust Network Access 
-Overview 
+<h2>Zero Trust Network Access </h2>
+<h3>Overview </h3>
 
 The architecture follows the Zero Trust ideology like ZTAA but unlike ZTAA, connects users to corporate networks or IP. The access can be leveraged for a set of IPs or can be bound to an IP and port.
 
 
-Components
+<h3>Components</h3>
 
 The primary components of the ZTNA include a Client, a Controller, a Gateway and resources. 
 
@@ -222,25 +223,25 @@ Note: Navigate to the Admin UI section of this document to know the extent of pr
 
 
 
-Installation Guide
+<h2>Installation Guide</h2>
 
 
 
-Zero Trust Application Access -  Applications in the DMZ
+<h3>Zero Trust Application Access -  Applications in the DMZ </h3>
 
 This guide details how to quickly set up a working ZTAA environment.
 The following steps have to be performed by an admin user on the portal <companyname>.app.instasafe.io.
 
-Create Users
+<h4>Create Users</h4>
 To create users, Navigate to the Users tab under Identity Management.
  Click on the ‘+’ icon to add a new user. Details like the role of the user, contact details have to be provided on this screen. On successful addition of the user, you will be given a notification in green. 
 You can verify the addition by refreshing the users page.
 
-Create Applications
+<h4>Create Applications</h4>
 To add applications, navigate to the Applications tab under Perimeter Management.
 Click on the ‘+’ icon to add a new application.Click on the application type required. Give the application an appropriate name and give its connection details like IP address (local) and Port.On successful addition of the user, you will be given a notification in green. 
 
-Create Policies
+<h4>Create Policies</h4>
 To add policies, Navigate to Access Policies in menu bar on the left side
 Click on the ‘+’ icon to add a new access policy. Give the policy an appropriate name and description and click on Next.
 Click on the Add User button to add a user/users to the policy.
@@ -250,7 +251,7 @@ This panel allows the admin to configure specific rules and rulesets (a boolean 
 This panel allows you to configure OTP/Captcha access to the application in addition to the MFA during the initial login. Click on Next
 This panel has the submit button to add this policy to the controller.On successful addition of the policy, you will be given a notification in green. 
 
-Create a Gateway
+<h4>Create a Gateway</h4>
 The gateway is the relay point between the user and the application and point of access to all the applications secured by the ZTAA. Therefore, the security configuration of the gateway has to be impenetrable.
 
 As an admin, Navigate to the Downloads page in the portal. Here you find the command to install the gateway on a linux machine
@@ -317,21 +318,21 @@ Navigate to the Identity Provider tab under Identity Management and navigate to 
 	Now users should be able to access the application from the application access section of the portal, the agent or the 4T Ready Client
 
 
-Zero Trust Network Access
+<h3>Zero Trust Network Access</h3>
 
 This guide details how to quickly set up a working ZTNA environment.
 The following steps have to be performed by an admin user on the portal <companyname>.app.instasafe.io.
 
-Create Users
+<h4>Create Users</h4>
 To create users, Navigate to the Users tab under Identity Management.
  Click on the ‘+’ icon to add a new user. Details like the role of the user, contact details have to be provided on this screen. On successful addition of the user, you will be given a notification in green. 
 You can verify the addition by refreshing the users page.
 
-Create Applications
+<h4>Create Applications</h4>
 To add applications, navigate to the Applications tab under Perimeter Management.
 Click on the ‘+’ icon to add a new application.Click on the application type required. Give the application an appropriate name and give its connection details like IP address (local) and Port.On successful addition of the user, you will be given a notification in green. 
 
-Create Policies
+<h4>Create Policies</h4>
 To add policies, Navigate to Access Policies in menu bar on the left side
 Click on the ‘+’ icon to add a new access policy. Give the policy an appropriate name and description and click on Next.
 Click on the Add User button to add a user/users to the policy.
@@ -341,7 +342,7 @@ This panel allows the admin to configure specific rules and rulesets (a boolean 
 This panel allows you to configure OTP/Captcha access to the application in addition to the MFA during the initial login. Click on Next
 This panel has the submit button to add this policy to the controller.On successful addition of the policy, you will be given a notification in green. 
 
-Create a Gateway
+<h4>Create a Gateway</h4>
 The gateway is the relay point between the user and the application and point of access to all the applications secured by the ZTAA. Therefore, the security configuration of the gateway has to be impenetrable.
 
 As an admin, Navigate to the Downloads page in the portal. Here you find the command to install the gateway on a linux machine
@@ -381,7 +382,7 @@ If the access code expires, follow all the steps until again step 8 where you ar
 
 
 	
-Add Applications to the Gateway
+<h4>Add Applications to the Gateway</h4>
 Now that the gateway has been added, the last part of the portal configuration is to add the applications to the gateway.
 Navigate to the Gateways tab under Perimeter Management. Click on the gateway that has just been installed. The names of the gateways are the same as the hostname of the linux box they are hosted on.
 On clicking the gateway, it expands to show more information and options. Here navigate to the Applications tab. Find View/Edit toggle on the topmost part of the screen and click to toggle between read and edit mode. 
@@ -393,20 +394,20 @@ A guide for users to access applications can be found under the Getting Started 
 
 
 
-Admin UI
+<h4>Admin UI</h4>
 The admin ui is the place where every administrative task available to the admin can be performed on the Zero Trust Platform.
 The admin ui is common for both ZTAA  and ZTNA platforms. Admins can manage any number of these platforms with the help of the features provided by this UI.
 
 The admin UI is driven by a View/Edit toggle to prevent accidental deletions. Modifications to existing entities can only be made in the edit mode.
 
 
-Identity Management
+<h4>Identity Management</h4>
 This part of the console is to manage users, user groups, their authentication profiles and the level of their access on the platform.
 
 
 The Dashboard shows an overview of the users and some useful information at a glance.
 
-Users
+<h4>Users</h4>
 A user in the Zero Trust platform allows any member of the organization to log onto the zero trust platform and access the resources that they are allowed access to by the company policies. The extent of access of a user on the Zero Trust platform is determined by the Role that has been  assigned.
 
 There are two Roles that can be assigned to any user in the organization.
@@ -419,11 +420,11 @@ Admin or Administrators have full control over the Zero Trust Platform and have 
 
 
  
-User Groups
+<h4>User Groups</h4>
 Users are easily manageable when the size of the organization is small or medium but as the size of the organization keeps increasing, it poses an administrative challenge to the people maintaining the users on the platform. User Groups are a construct by which administrators can keep track of users as groups instead of individual users. This allows the administrators to perform actions on groups of users which saves them a lot of time and organizational effort. Additionally, Administrators can still grant users privileges apart from their group privileges.
 
 
-Auth Profile
+<h4>Auth Profile</h4>
 Users can be authenticated into the Zero Trust platform in the following ways
 The primary authentication mode can be any of the following
 Password
@@ -441,13 +442,13 @@ OTPs, Captcha and Security Questions can be configured.
 
 The Session timeout i.e  the event occuring when a user does not perform any action on the platform during an interval and is subsequently logged out due to inactivity can be configured according to the company policy.
 
-Identity Provider
+<h4>Identity Provider</h4>
 For third party applications, Instasafe can act as an SAML Identity Provider and provide authenticated identities to a SAML SP to enable Single Sign On  with Instasafe’s user validation and device posture checks. This allows users to login into third party applications by a simple one click interface on the ZTAA Agent and Web Browser.
 Directory Sync Profiles
 The user database can be synced with the existing active directory of the company to assign privileges and resource access to various users/user groups. The user groups existing in the active directory can be imported into the  platform to provision resources without the need to create user groups on the platform separately.
 
-Perimeter Management
-Applications 
+<h4>Perimeter Management</h4>
+<h5>Applications </h5>
 
 Administrators have control over the applications and their interaction with the end users. Administrators can restrict access to certain browser features like downloads, clipboard access, can record the screen for auditing purposes and set aliases for the applications.
 The application groups supported by ZTAA are as follows
@@ -460,13 +461,13 @@ Android
 IOS
 Network Apps
 
-Devices
+<h5>Devices</h5>
 Whenever a user connects to the Zero Trust Platform, the platform collects vital information about the user’s device to ensure the security posture of the device. The information collected can be reviewed and reused by the admin to make more exclusive rules to tighten the security of the network. The admin can also use this data to detect any rogue devices and actively block them right through the panel. Once blocked, the device cannot be used to access the platform when accessed from any interface on the computer. The collected data can be exported into a CSV for later review or piped into the data management system under configuration for further processing.
 
-Gateways
+<h5>Gateways</h5>
 As detailed in the architecture, The gateway is the policy enforcement point of the entire system. The gateway acts as the interface between the Internet and the protected network. Applications in the protected network can only be accessed through the gateway. Applications can be added and removed from the gateway dynamically.
 
-Access Policies
+<h5>Access Policies</h5>
 Access policies are one of the most important security configurations in the ZTAA platform. It is through these policies that the ideas of micro segmentation and granular access control, both cornerstones of a Zero Trust network are  achieved on the platform. 
 
 A basic access policy consists of a user and application in which case the user is allowed access to the application. By default, No user has access to an application when it is added to the gateway. An access rule including the user and the application has to be manually added to allow the user access to that application.
@@ -482,7 +483,7 @@ A complex check might look like the following image
 
 Here, every device’s MAC address is verified with a database of known MAC Addresses and OS Version is verified to be a known operating system. Such complex checks are important when dealing with highly critical applications which might warrant that extra layer of protection.
 
-Audit
+<h4>Audit</h4>
 
 Audit provides an interface to monitor the entire Zero Trust Platform. All critical information about the users and their usage on the platform is logged and can be accessed from here.
 A myriad of data points can be exported from the platform
@@ -490,17 +491,17 @@ Recent Active Users,Gateway Status,Username Lookups,User Logins,Authentication L
 
 The data can be displayed on the portal with options to sort and search  or can be exported to a CSV for ingestion into other data analysis platforms.
 
-Configuration
+<h4>Configuration</h4>
 Data Management
 Datasets can be added into the platform to be used as reference value or values to compare existing device parameters against. 
 
-Event Stream Profiles
+<h4>Event Stream Profiles</h4>
 The platform runs an event streaming server to capture events on the machines inside the protected network. The server is capable of capturing linux syslogs, FTP event logs, SFTP event logs etc. An event streaming client has to be installed on the end machine to push logs to the server. The portal then pulls these events from the event server and publishes them to the user.
-VPN Profiles
+<h4>VPN Profiles</h4>
 ZTNA can be configured to allow access to a particular virtual address space when connected into the gateway. By default, a rule is added during the ZTNA setup but can be later configured as per the requirements of the users.
 
 
-Application Access  
+<h4>Application Access  </h4>
 
 The session captures how an end user interacts with a ZTAA agent and accesses the application. The entire process is automated so that the end user has a simple one click interface to access the application.
 
@@ -509,7 +510,8 @@ The session captures how an end user interacts with a ZTAA agent and accesses th
 
 
 
-Getting Started - End User
+
+<h2>Getting Started - End User</h2>
 This section will be helpful for the users who are using the Instasafe Zero Trust platform for the first time to access an application, and want to learn their way around the platform.
 
 Head to the <companyname>.app.instasafe.io and login with the username and password.
