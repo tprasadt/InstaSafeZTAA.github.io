@@ -169,9 +169,10 @@ Resources are customer infrastructure elements that are secured by ZTNA.
 
 
 
-                                                Figure 2
+<img src="images/ZTNA.png" alt="hi" class="inline"/>
+                                           
 
-The client connects to the corporate network as graphically depicted in Figure 2.
+The client connects to the corporate network as graphically depicted in the above figure
 
 The client sends a Single Packet Authentication (SPA) packet containing its device and user fingerprint to the controller. The controller will validate that SPA packet. On successful validation, a dynamic port rule is opened such that the client’s ip can connect to the controller but no response is sent to the client.
 The client then connects to the controller via a secure control channel separate from the data channel used to transmit application data. 
@@ -234,7 +235,8 @@ The following steps have to be performed by an admin user on the portal <company
 To create users, Navigate to the Users tab under Identity Management.
  Click on the ‘+’ icon to add a new user. Details like the role of the user, contact details have to be provided on this screen. On successful addition of the user, you will be given a notification in green. 
 You can verify the addition by refreshing the users page.
-
+<img src="images/createUsers.png" alt="hi" class="inline"/>
+	
 <h4>Create Applications</h4>
 To add applications, navigate to the Applications tab under Perimeter Management.
 Click on the ‘+’ icon to add a new application.Click on the application type required. Give the application an appropriate name and give its connection details like IP address (local) and Port.On successful addition of the user, you will be given a notification in green. 
