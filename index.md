@@ -82,9 +82,7 @@ Resources are the infrastructure that are secured by ZTAA.
 <img src="images/ZTAA_Arch1.png" alt="hi" class="inline"/>
 
 
-                                                Figure 1
-
-The client connects to the desired resource as graphically depicted in Figure 1.
+The client connects to the desired resource as graphically depicted in the above figure.
 
 The client sends a Single Packet Authentication (SPA) packet containing its device and user fingerprint to the controller. The controller will validate that SPA packet. On successful validation, a dynamic port rule is opened such that the client’s ip can connect to the controller but no response is sent to the client.
 The client then connects to the controller via a secure control channel separate from the data channel used to transmit application data. 
@@ -132,7 +130,7 @@ On successful validation of the SAML Response, the Service Provider returns an a
 
 The visualization of the above flow can be seen in the following figure
 
-					
+<img src="images/SAM1.png" alt="hi" class="inline"/>					
 
 SP Initiated ( Service Provider Initiated)
 This flow is initiated by the Service Provider.  The SP is preconfigured with all the data necessary to establish trust between the SP and IdP. The Service Provider sends a AuthNRequest to the IdP requesting for identity assertions. The IdP sends a SAML Response to the SP with the authentication assertions of the users and the SP validates the response and forwards an authenticated application session to the user on successful validation of the response.
@@ -146,7 +144,7 @@ On successful validation of the SAML Response, the Service Provider returns an a
 
 The visualization of the above flow can be seen in the following figure
 
-
+<img src="images/SAM2.png" alt="hi" class="inline"/>
 
  
 
