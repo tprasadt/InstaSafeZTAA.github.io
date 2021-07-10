@@ -6,9 +6,9 @@
 
 Popular legacy based security models these days, including the VPN, run on the principle of trusting “inside the network” users and assets by default. With the fast adaptation of hybrid users & remote working norms, the authentication of users can be easily compromised, making conventional security models highly vulnerable. 
 
-Therefore, There is a need for a system that reimagines network security as we know it.Hence, the idea of Zero Trust came into existence.
+Therefore, There is a need for a system that reimagines network security as we know it.Hence, the idea of Zero Trust came into existence. Zero Trust based access provide a secure and simple mechanism to enable the remote access for the applications and servers.
 
- The documentation covers the Zero Trust solution and a detailed explanation of the administrator and the user perspective.
+The documentation covers the Zero Trust solution and a detailed explanation of the administrator and the user perspective.
 
 <h2> What is Zero Trust?</h2>
 
