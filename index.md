@@ -79,7 +79,7 @@ Gateways are the components which enforce the policies and entitlements set by t
 Resources are the infrastructure that are secured by ZTAA.
 
 
-
+<img src="images/ZTAA_Arch1.png" alt="hi" class="inline"/>
 
 
                                                 Figure 1
