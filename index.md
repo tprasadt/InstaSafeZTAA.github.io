@@ -4,9 +4,11 @@
 
 <h2> Introduction </h2>
 
+The Zero Trust based access provide the most secure and a simple mechanism to enable the remote access for the applications and servers from multiple datacenter and cloud enviornments on a single click from a dashboard at the user's device and it is powered by SAML and SSO.
+
 Popular legacy based security models these days, including the VPN, run on the principle of trusting “inside the network” users and assets by default. With the fast adaptation of hybrid users & remote working norms, the authentication of users can be easily compromised, making conventional security models highly vulnerable. 
 
-Therefore, There is a need for a system that reimagines network security as we know it.Hence, the idea of Zero Trust came into existence. Zero Trust based access provide a secure and simple mechanism to enable the remote access for the applications and servers.
+Therefore, There is a need for a system that reimagines network security as we know it.Hence, the idea of Zero Trust came into existence. 
 
 The documentation covers the Zero Trust solution and a detailed explanation of the administrator and the user perspective.
 
@@ -19,20 +21,22 @@ Traditional network centric security systems grant more trust than required, whi
 
 <h2>Zero Trust Models </h2>
 
-Keeping in mind about the above principles of Zero Trust, Companies have implemented Zero Trust into their products in two different ways
+Keeping in mind about the above principles of Zero Trust, Companies have orchestrated Zero Trust into their IT infrastructure primarly in two different ways.
 
 <h3>Client Initiated Zero Trust Access </h3>
+
 This model uses the Software Defined Perimeter as proposed by the Cloud Security Alliance as its inspiration. This model includes the use of an “Agent” which resides on the client’s machines and connects the client to  the required resource after performing necessary security checks and validations defined by the company operating the Zero Trust Network.
 Such a model can be used to access company resources in private networks  and cloud hosted services securely from anywhere in the world. 
 Examples of client-initiated solutions are InstaSafe’s Zero Trust Application Access (ZTAA) and Zero Trust Network Access (ZTNA).
 
-<pic>
+<img src="images/EndPointZTNA.png" alt="hi" class="inline"/>
 
 <h3> Service Initiated Zero Trust Access </h3>
 	
 This model implements Zero Trust using a reverse proxy architecture. It is based on Google’s Zero Trust Implementation called BeyondCorp. It uses the browser to validate the user and  establish a tunnel between the client and server eliminating the need for an agent to be installed and maintained on enterprise devices. However, The access is limited to cloud hosted services as it only supports protocols like HTTP/HTTPs due to its reliance on the browser and has limited support for other protocols.
 Examples of client-initiated solutions are Google’s BeyondCorp InstaSafe’s Agentless Gateway
-<pic>
+
+<img src="images/SrvPointZTNA.png" alt="hi" class="inline"/>
 
 <h2>InstaSafe’s Zero Trust Products</h2>
 
