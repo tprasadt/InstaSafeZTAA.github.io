@@ -69,13 +69,13 @@ Why ZTNA : https://instasafe.com/zero-trust-network-access/
 
 <h2>Architecture</h2>
 
-Zero Trust Application Access - Share the Application in DMZ
+<h3>Zero Trust Application Access - Share the Application in DMZ</h3>
 
-<h3>Overview </h3>
+<h4>Overview </h4>
 
 The architecture is based on the Client-Gateway model as detailed in the CSA architecture guide for SDP .
 
-<h3>Components</h3>
+<h4>Components</h4>
 
 The primary components of the ZTAA include the Client,  Controller,  Gateway and the IT resources of the organisation. 
 
@@ -101,15 +101,12 @@ Based on the information gathered on the user and user’s device, the controlle
 On successful validation of the client’s access request, a mTLS tunnel is established to the gateway and the data flows from the application to the gateway on the local network and then is relayed to the client by the gateway through the TLS tunnel. The gateway dynamically creates access rules for the client to use the resources.This is the first part of the process where the user is allowed into ZTAA’s network to access critical resources. Therefore, the gateway logs and monitors all the traffic flowing in and out of the network. 
 
 
-	
-
-
-<h2>Zero Trust Application Access -  Third Party Applications (SAML based)</h2>
-<h3>Overview </h3>
+<h3>Zero Trust Application Access -  Third Party Applications (SAML based)</h3>
+<h4>Overview </h4>
 
 The architecture is based on the interaction between a SAML Service Provider and SAML Identity Provider with the additional layers of security that come with using the Zero Trust Platform.
 
-<h3>Components</h3>
+<h4>Components</h4>
 The primary components of the SAML based ZTNA access include a Client, a Controller, a Gateway and the resources. 
 
 Clients are devices that are in the hands of users who wish to access resources which are secured by  ZTAA. Laptops, Desktops, Mobile phones are examples of such clients. An agent or the web browser can be used to access applications of this type
@@ -125,10 +122,10 @@ It receives and validates the SAML Response sent by the Identity Provider. On su
 SAML Identity Provider (IdP) is a component of Zero Trust Platform which provides authentication identities of users within the system to third party applications to enable Single Sign On into those applications.
 
 
-<h2>Authentication Flows</h2>
+<h4>Authentication Flows</h4>
 
 SAML Single Sign On (SAML SSO) has two authentication flows which allow developers to use the flow more suitable to their business requirements.
-IdP Initiated ( Identity Provider Initiated)
+<h5>IdP Initiated ( Identity Provider Initiated)</h5>
 This flow is initiated by the identity provider. Once the SP is preconfigured with all the data necessary to establish trust between the SP and IdP, the IdP sends a SAML Response to the SP with the authentication assertions of a users and the SP validates the response and forwards and authenticated application to the user on successful validation of the response.
 
 In ZTAA, this flow is useful when providing the one-click interface to the user to access the third party applications. The flow inside ZTAA is as follows
@@ -141,7 +138,8 @@ The visualization of the above flow can be seen in the following figure
 
 <img src="images/SAM1.png" alt="hi" class="inline"/>					
 
-SP Initiated ( Service Provider Initiated)
+<h5>SP Initiated ( Service Provider Initiated)</h5>
+
 This flow is initiated by the Service Provider.  The SP is preconfigured with all the data necessary to establish trust between the SP and IdP. The Service Provider sends a AuthNRequest to the IdP requesting for identity assertions. The IdP sends a SAML Response to the SP with the authentication assertions of the users and the SP validates the response and forwards an authenticated application session to the user on successful validation of the response.
 
 In ZTAA, this flow is useful when users try to log into a third party application by clicking on the login with the SSO option provided by the application. The flow is as follows
@@ -156,7 +154,6 @@ The visualization of the above flow can be seen in the following figure
 <img src="images/SAM2.png" alt="hi" class="inline"/>
 
  
-
 
 <h2>Zero Trust Network Access </h2>
 <h3>Overview </h3>
