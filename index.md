@@ -3,25 +3,25 @@ sidebar:
   nav: docs
   
 
-<h1>InstaSafe Zero Trust Application Access Documentation</h1>
+<h1>InstaSafe Zero Trust Access Documentation</h1>
 
 
 
 <h2> Introduction </h2>
 
-The Zero Trust based access provide the most secure and a simple mechanism to enable the remote access for the applications and servers from multiple datacenter and cloud enviornments on a single click from a dashboard at the user's device and it is powered by SAML and SSO.
+The Zero Trust based access provides the most secure and a simple mechanism to enable the remote access for the applications and servers from multiple datacenter and cloud enviornments on a single click from a dashboard at the user's device and it is powered by SAML and SSO.
 
 Popular legacy based security models these days, including the VPN, run on the principle of trusting “inside the network” users and assets by default. With the fast adaptation of hybrid users & remote working norms, the authentication of users can be easily compromised, making conventional security models highly vulnerable. 
 
 Therefore, There is a need for a system that reimagines network security as we know it.Hence, the idea of Zero Trust came into existence. 
 
-The documentation covers the Zero Trust solution and a detailed explanation of the administrator and the user perspective.
+The documentation covers the InstaSafe Zero Trust Access solution and a detailed explanation from the administrator and the user perspective.
 
 <h2> What is Zero Trust?</h2>
 
 Zero Trust is a security model that doesn't trust any entity, whether inside or outside the network. Unlike traditional security systems which follow the 'Trust but verify' approach, Zero Trust Models follow a 'Never Trust, always verify' approach, using strict access control policies and constant monitoring to secure enterprise networks from malware and other security threats. Zero trust ensures that each and every user and their devices are validated and given the least required access on a “need to know” basis. It also involves continuous monitoring of current users to identify malicious behaviour and revoke access accordingly.
 
-Traditional network centric security systems grant more trust than required, which can be exploited.
+Traditional network centric security systems grant more trust than required, which can be exploited. Zero Trust Access avoid the access for exploitation and contain the spread on an eventuality.
 
 
 <h2>Zero Trust Models </h2>
