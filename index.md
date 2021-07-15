@@ -147,11 +147,12 @@ The visualization of the above flow can be seen in the following figure
 
 This flow is initiated by the Service Provider.  The SP is preconfigured with all the data necessary to establish trust between the SP and IdP. The Service Provider sends a AuthNRequest to the IdP requesting for identity assertions. The IdP sends a SAML Response to the SP with the authentication assertions of the users and the SP validates the response and forwards an authenticated application session to the user on successful validation of the response.
 
-In ZTAA, this flow is useful when users try to log into a third party application by clicking on the login with the SSO option provided by the application. The flow is as follows
+In ZTAA, this flow is useful when users try to log into a third party application by clicking on the login with the SSO option provided by the application. The flow is as follows.
+
 The user is logged into the ZTAA platform. The user tries to login into a third party application using the SSO feature.
 The application sends an AuthNRequest to the IdP requesting for assertions about the user’s identity.
 Since the user is already authenticated by the ZTAA platform, the IdP sends a SAML Response to the Service Provider providing the assertions about the user to validate the user’s identity.
-The Service Provider receives and validates the SAML Response sent by the IdP via the user agent.
+The Service Provider receives and validates the SAML Assertion sent by the IdP via the user agent.
 On successful validation of the SAML Response, the Service Provider returns an authenticated session of the application to the user agent for the user to consume.
 
 The visualization of the above flow can be seen in the following figure
