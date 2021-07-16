@@ -204,10 +204,7 @@ On successful validation of the client’s access request, a wireguard tunnel is
 
 
 
-Components
-
-
-Clients
+<h2> InstaSafe ZTA Agent</h2>
 
 The Instasafe Agent is the primary way a consumer interacts with a Zero Trust Network . The Agent is available on all desktop operating systems as  an electron application. The agent is designed to access both the ZTAA infrastructure and ZTNA infrastructure at the same time. The agent provides a simple one click interface to the consumer to open applications configured in their company’s Zero Trust infrastructure. 
 
@@ -223,28 +220,20 @@ The agent is configured to auto-update to the latest version available.
 In addition to the desktop agent, Instasafe also offers mobile applications to access to the consumer to access their Zero Trust Infrastructure.
 InstaSafe® 4T Ready Client is available on both the Google Play Store and the iOS App Store.
 
-Policies
+<h2>Policies</h2>
 Policies are the way to control a user’s access to company infrastructure. They are a critical component in any zero trust network and have to be configured carefully keeping in mind the need-to-know model of allowing access.
 
-Users
+<h2>Users</h2>
 There are two types of users within the system.
-User 
-Every person using the platform will have the privilege of a user.
- A user can only use the platform and cannot make any changes to the platform
-Admin
-Admin is a privileged user who has the permissions to
-Create and manage users and user groups
-Create applications
-Add Gateways
-Add access policies
-Etc..
+<h3>Read only User </h3>
+Every person using the platform will have the privilege of a read only user. The user can only use the platform and cannot make any changes to the platform
+<h3>Admin</h3>
+Admin is a privileged user who has the permissions to Create and manage users and user groups, Create applications, Add Gateways, Add access policies Etc..
 Note: Navigate to the Admin UI section of this document to know the extent of privileges of an admin user.
 
 
 
 <h2>Installation Guide</h2>
-
-
 
 <h3>Zero Trust Application Access -  Applications in the DMZ </h3>
 
