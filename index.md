@@ -43,13 +43,13 @@ Examples of client-initiated solutions are Google’s BeyondCorp InstaSafe’s A
 
 <img src="images/SrvPointZTNA.png" alt="hi" class="inline"/>
 
-<h2>InstaSafe’s Zero Trust Products</h2>
+<h2>InstaSafe Zero Trust Access(ZTA)</h2>
 
-InstaSafe offers two different Zero Trust based remote access solutions. Both of the implementation can co-exist in an installation in order to support L3/L4 network layer access (SSH/RDP/File folder access ...) and specific application access.
+InstaSafe offers two different Zero Trust based remote access solutions merged in to one solution called Zero Trust Access. Zero Trust based Network access enable the access at IP/Network level, where as the Zero Trust Application Access enables the application access. Both of the implementation can co-exist in an installation in order to support L3/L4 network layer access (SSH/RDP/File folder access ...) and specific application access.
 
 Both of the methods adopts the seperate plane of data traffic for authentication and the application/server data. The user authentication and the device authictication will be carried out in terms of credentials, MFA and the security posture checks. Only the Aunthorised devices and users can send the traffic to the data plane and access the organisation's assets such as servers and Applications.
 
-The architecture also follows the SPA and drop-all-firewall principles in order to hide the IT infrastructure completely from the internet. Any network request from an unknown client will be dropped off (not deny) by the firewall rules. Hence the presence of the ZT infrastructure and the organisation's assets are hidden from the internet.
+The architecture also follows the SPA and drop-all-firewall principles in order to hide the IT infrastructure completely from the internet. Any network request from an unknown client will be dropped off (not deny) by the firewall rules. Hence the presence of the ZT infrastructure and the organisation's assets are hidden from the internet. Not even the tools such as nmap can identify them.
 
 <h3>InstaSafe Zero Trust Application Access (ZTAA) </h3>
 
@@ -84,13 +84,14 @@ The architecture is based on the Client-Gateway model as detailed in the CSA arc
 
 The primary components of the ZTAA include the Client,  Controller,  Gateway and the IT resources of the organisation. 
 
-Clients are devices that are in the hands of users who wish to access resources which are secured by  ZTAA. Laptops, Desktops, Mobile phones are examples of such clients. However, the ZTAA Agent has to be installed on these devices to be able to communicate and interact with the Zero Trust Network . The client is configured to drop all connections to the SDP in the case that any of  ZTAA’s access policies are violated or the standards are not met. 
+Clients are devices that are in the hands of users who wish to access resources that are secured by  ZTA. Laptops, Desktops, Mobile phones are examples of such clients. However, the ZTA Agent has to be installed on these devices to be able to communicate and interact with the Zero Trust Network . The client is configured to drop all connections to the SDP in the case that any of  ZTAA’s access policies are violated or the standards are not met. 
+Note: Client less access the resources can be powered by a browser based access, but with less scope and lesser secure posture validations
 
-Controllers are the decision making components in ZTAA . They are connected to Identity providers  to gather information about the users trying to access the network. The client sends vital information about the user’s device to the controller which helps the controller in granting entitlements i.e the level of access to the clients. In the context of the CSA SDP model, this component is the Policy Decision Point (PDP).
+Controllers are the decision making components in ZTAA . They are connected to Identity providers  to gather information about the users trying to access the network. It has a inbuilt IdP for user and group management. ZTA Controller also supports Active directory, Azure AD and SAML Assertions for application and network access. The client sends vital information about the user’s device to the controller which helps the controller in granting entitlements i.e the level of access to the clients. In the context of the CSA SDP model, this component is the Policy Decision Point (PDP).
 
 Gateways are the components which enforce the policies and entitlements set by the controllers. They verify the client's entitlements to grant them access to the resources only in the client’s context. In the context of the CSA SDP or NIZT ZT model, this component is the Policy Enforcement Point (PEP)
 
-Resources are the infrastructure that are secured by ZTAA.
+Resources are the infrastructure that are secured by ZTA.
 
 
 <img src="images/ZTAA_Arch1.png" alt="hi" class="inline"/>
