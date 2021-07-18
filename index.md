@@ -235,9 +235,12 @@ Note: Navigate to the Admin UI section of this document to know the extent of pr
 
 <h2>Installation Guide</h2>
 
-<h3>Zero Trust Application Access -  Applications in the DMZ </h3>
+<h3>Zero Trust Application Access - With Applications in the DMZ </h3>
 
-This guide details how to quickly set up a working ZTAA environment.
+This guide details how to quickly set up a working ZTAA environment. The control access has to be configured at the controller level, where as the application has to be onboarded via the gateway.
+
+<h3> Controller Configurations </h3>
+
 The following steps have to be performed by an admin user on the portal <companyname>.app.instasafe.io.
 
 <h4>Create Users</h4>
