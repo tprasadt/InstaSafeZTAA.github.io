@@ -498,7 +498,9 @@ AntiVirus Updated Name,serial number,location,DateTime,OS Family,OS Main Version
 The platform can store reference values as datasets under data management to be used as a reference to compare the retrieved parameters with.
 	
 A complex check might look like the following image 
+	
 <img src="images/gtwsmal.png" alt="hi" class="inline"/>
+	
 Here, every device’s MAC address is verified with a database of known MAC Addresses and OS Version is verified to be a known operating system. Such complex checks are important when dealing with highly critical applications which might warrant that extra layer of protection.
 
 <h4>Audit</h4>
