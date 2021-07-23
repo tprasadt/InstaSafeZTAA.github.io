@@ -379,11 +379,17 @@ Once installed, we can run the gateway installation script. Before running the s
     sudo /bin/bash -c "$(curl -fSsL https://storage.googleapis.com/4tr/start.sh)" 2>&1 | tee -a installationlogs.txt 
 
 After some processing, you will be presented with the following menu
+	
 <img src="images/gtwopt1.png" alt="hi" class="inline"/>
+	
 Enter 3 and press Enter. The following menu will appear
+	
 <img src="images/gtw2.png" alt="hi" class="inline"/>
+	
 Enter 1 and press Enter. The installation process will begin.The next prompt will ask you to select the version of the gateway.
+	
 <img src="images/gtw3.png" alt="hi" class="inline"/>
+	
 Select the desired version by entering its corresponding number on the prompt and press Enter.
 The installation process will start. It will download and install all the required packages. Once the installation is done, you will be presented with an access code as shown below.
 
