@@ -247,6 +247,7 @@ The following steps have to be performed by an admin user on the portal <company
 To create users, Navigate to the Users tab under Identity Management.
  Click on the ‘+’ icon to add a new user. Details like the role of the user, contact details have to be provided on this screen. On successful addition of the user, you will be given a notification in green. 
 You can verify the addition by refreshing the users page.
+
 <img src="images/createUsers.png" alt="hi" class="inline"/>
 	
 <h4>Create Applications</h4>
@@ -275,14 +276,14 @@ A user in the linux system with sudo privileges.
 Once the prerequisites are met, SSH into the linux machine using the SSH client and authentication mechanism of your choice.
 The installation script uses the curl command to download the installation script. Therefore, make sure that curl is installed on the system by runnin the following command
 For Ubuntu and Debian systems
-sudo apt install curl
+  sudo apt install curl
 
 For  RHEL, CentOS and Fedora distros
-yum install curl
+  yum install curl
 
 
 Once installed, we can run the gateway installation script. Before running the script, prepend the command in downloads with the keyword ‘sudo’. 
-sudo /bin/bash -c "$(curl -fSsL https://storage.googleapis.com/4tr/start.sh) --devmode" 2>&1 | tee -a installationlogs.txt 
+       sudo /bin/bash -c "$(curl -fSsL https://storage.googleapis.com/4tr/start.sh) --devmode" 2>&1 | tee -a installationlogs.txt 
 
 After some processing, you will be presented with the following menu
 
@@ -304,6 +305,7 @@ If the access code expires, follow all the steps until again step 8 where you ar
 
 	
 Add Applications to the Gateway
+	
 Now that the gateway has been added, the last part of the portal configuration is to add the applications to the gateway.
 Navigate to the Gateways tab under Perimeter Management. Click on the gateway that has just been installed. The names of the gateways are the same as the hostname of the linux box they are hosted on.
 On clicking the gateway, it expands to show more information and options. Here navigate to the Applications tab. Find View/Edit toggle on the topmost part of the screen and click to toggle between read and edit mode. 
@@ -316,6 +318,7 @@ A guide for users to access applications can be found under the Getting Started 
 
 
 Zero Trust Application Access -  SAML applications
+	
 This guide details the steps involved in adding SAML SSO supported third party applications into ZTAA. Since each Service Provider has different requirements to establish trust between the platform and itself, The process of adding the application will be detailed assuming that configuration has been done such that the Service Provider trusts the Instasafe IDP.
 
 Navigate to the Identity Provider tab under Identity Management. Click on the ‘+’ to add a new service provider.
@@ -366,23 +369,25 @@ A user in the linux system with sudo privileges.
 Once the prerequisites are met, SSH into the linux machine using the SSH client and authentication mechanism of your choice.
 The installation script uses the curl command to download the installation script. Therefore, make sure that curl is installed on the system by runnin the following command
 For Ubuntu and Debian systems
-sudo apt install curl
+  sudo apt install curl
 
 For  RHEL, CentOS and Fedora distros
-yum install curl
+   yum install curl
 
 
 Once installed, we can run the gateway installation script. Before running the script, prepend the command in downloads with the keyword ‘sudo’. 
-sudo /bin/bash -c "$(curl -fSsL https://storage.googleapis.com/4tr/start.sh)" 2>&1 | tee -a installationlogs.txt 
+    sudo /bin/bash -c "$(curl -fSsL https://storage.googleapis.com/4tr/start.sh)" 2>&1 | tee -a installationlogs.txt 
 
 After some processing, you will be presented with the following menu
-
-Enter 1 and press Enter. The following menu will appear
-
+<img src="images/gtwopt1.png" alt="hi" class="inline"/>
+Enter 3 and press Enter. The following menu will appear
+<img src="images/gtw2.png" alt="hi" class="inline"/>
 Enter 1 and press Enter. The installation process will begin.The next prompt will ask you to select the version of the gateway.
-	
- Select the desired version by entering its corresponding number on the prompt and press Enter.
+<img src="images/gtw3.png" alt="hi" class="inline"/>
+Select the desired version by entering its corresponding number on the prompt and press Enter.
 The installation process will start. It will download and install all the required packages. Once the installation is done, you will be presented with an access code as shown below.
+
+<img src="images/gtwkey.png" alt="hi" class="inline"/>
 
 Copy the access code here and head to the portal.
 Navigate to the Gateways tab under Perimeter Management. Click on the ‘+’ to add a gateway. Select the option Private Gateway and click on Next.
@@ -491,8 +496,9 @@ In addition to users and user groups, Each user can be validated against a set o
 AntiVirus Updated Name,serial number,location,DateTime,OS Family,OS Main Version,OS Minor Version,OS Build Version,System Domain Name,Mac Address,AntiVirus Installed,AntiVirus Enabled,AntiVirus Updated,AntiVirus Installed Name,AntiVirus Enabled Name,AntiVirus Updated Name.
 
 The platform can store reference values as datasets under data management to be used as a reference to compare the retrieved parameters with.
+	
 A complex check might look like the following image 
-
+<img src="images/gtwsmal.png" alt="hi" class="inline"/>
 Here, every device’s MAC address is verified with a database of known MAC Addresses and OS Version is verified to be a known operating system. Such complex checks are important when dealing with highly critical applications which might warrant that extra layer of protection.
 
 <h4>Audit</h4>
@@ -520,19 +526,21 @@ The session captures how an end user interacts with a ZTAA agent and accesses th
 
 
 
-
-
-
 <h2>Getting Started - End User</h2>
 This section will be helpful for the users who are using the Instasafe Zero Trust platform for the first time to access an application, and want to learn their way around the platform.
 
 Head to the <companyname>.app.instasafe.io and login with the username and password.
 Your username and password will be provided by your IT administrator.
 Once logged in with the credentials, You will be presented with the following screen
+
+<img src="images/appview.png" alt="hi" class="inline"/>
+
 Navigate to the download icon (second icon) on the menu to the left. 
 Download the agent for your operating system. 
 Install the agent and login.
 All the applications that you have access to will be shown on the screen
+
+<img src="images/appview.png" alt="hi" class="inline"/>
 	
 Clicking on any application will launch it within the agent.
 
