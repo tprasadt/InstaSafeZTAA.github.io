@@ -252,12 +252,18 @@ You can verify the addition by refreshing the users page.
 	
 <h4>Create Applications</h4>
 To add applications, navigate to the Applications tab under Perimeter Management.
-Click on the ‘+’ icon to add a new application.Click on the application type required. Give the application an appropriate name and give its connection details like IP address (local) and Port.On successful addition of the user, you will be given a notification in green. 
+Click on the ‘+’ icon to add a new application.Click on the application type required. Give the application an appropriate name and give its connection details like IP address (local) and Port.On successful addition of the application, you will be given a notification in green. 
 
+Note: At this point we are assuming that the newly added application is reachable from the installed gateway.
+	
 <h4>Create Policies</h4>
-To add policies, Navigate to Access Policies in menu bar on the left side
+	
+To add policies, Navigate to Access Policies in menu bar on the left side<br>
+	
 Click on the ‘+’ icon to add a new access policy. Give the policy an appropriate name and description and click on Next.
+	
 Click on the Add User button to add a user/users to the policy.
+	
 After adding user/users, Click on Next. 
 This panel lets you add applications to the policy. This essentially means that all the users added to this policy will be able to access the applications that are added to this policy. Click on Add Application and add applications to the policy. And Click on next.
 This panel allows the admin to configure specific rules and rulesets (a boolean combination of rules) that have to be met before being able to access the applications covered under this policy. Click on Next.
