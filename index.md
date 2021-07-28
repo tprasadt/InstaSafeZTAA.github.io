@@ -498,12 +498,13 @@ Instasafe Zero Trust can act as a SAML Service Provider to utilize any third par
 	
 <h5>AD</h5>
 Companies with existing Active Directories can add their servers to the platform and ZTAA will contact the AD server to authenticate the user’s credentials without the need to register the users individually into the platform. Further details about syncing the AD profiles can be found under the Directory Sync Profiles.
-	
-<h5>OAuth</h5>
-	
-In addition to the the primary authentication schemes, Instasafe offers several MultiFactor authentication schemes like OTPs, Captcha and Security Questions can be configured.
 
-The Session timeout i.e  the event occuring when a user does not perform any action on the platform during an interval and is subsequently logged out due to inactivity can be configured according to the company policy.
+In addition to the the primary authentication schemes, Instasafe offers several MultiFactor authentication schemes like,<br>
+OTPs (Mobile Apps, Email and SMS)<br>
+Captcha<br>
+Security Questions<br>
+
+The User session timeout i.e  the event occuring when a user does not perform any action on the platform during an interval and is subsequently logged out due to inactivity can be configured according to the company policy.
 
 <h4>Identity Provider</h4>
 For third party applications, Instasafe can act as an SAML Identity Provider and provide authenticated identities to a SAML SP to enable Single Sign On  with Instasafe’s user validation and device posture checks. This allows users to login into third party applications by a simple one click interface on the ZTAA Agent and Web Browser.
