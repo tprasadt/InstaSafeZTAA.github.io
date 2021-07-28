@@ -104,7 +104,7 @@ The client then connects to the controller via a secure control channel separate
 The client provides the controller with data about the device’s various security measures as defined in the controller’s trust policy. The controller uses an identity provider to authenticate the user’s credentials. Additionally, Multi-Factor-Authentication is also used to verify the user’s authenticity.
 Based on the information gathered on the user and user’s device, the controller issues a dynamic entitlement token which is cryptographically signed by itself to the client. The entitlement is dynamic because the user is not guaranteed the same entitlements on each access if the client or the device does not meet certain policy rules. The entitlement is granted based on the data collected from the sources at the time of access, therefore is subject to change. Controller communicates with the ZTA Gateway about the user permission via Message Queue ( Amazon SQS or InstaSafe Message Queues).
 
- After receiving the entitlement in the form of a certificate, the client then connects to the gateway by using another SPA mechanism and provides its certificate to access a particular resource. The gateway verifies whether the certificate was issued by the controller. The gateway then uses the entitlement to determine whether the requested resources are within the client’s context by communicating with the controller.
+After receiving the entitlement in the form of a certificate, the client then connects to the gateway by using another SPA mechanism and provides its certificate to access a particular resource. The gateway verifies whether the certificate was issued by the controller. The gateway then uses the entitlement to determine whether the requested resources are within the client’s context by communicating with the controller.
  
 On successful validation of the client’s access request, a mTLS tunnel is established to the gateway. The data flows from the application server to the gateway on the local network and then is relayed to the client by the gateway through the TLS tunnel. The gateway dynamically creates access rules for the client to use the resources based on the messaged via the message queues.This is the first part of the process where the user is allowed into ZTAA’s network to access critical resources. The gateway logs and monitors all the traffic flowing in and out of the network. 
 
@@ -481,22 +481,27 @@ Admin or Administrators have full control over the Zero Trust Platform and have 
 <h4>User Groups</h4>
 Users are easily manageable when the size of the organization is small or medium but as the size of the organization keeps increasing, it poses an administrative challenge to the people maintaining the users on the platform. User Groups are a construct by which administrators can keep track of users as groups instead of individual users. This allows the administrators to perform actions on groups of users which saves them a lot of time and organizational effort. Additionally, Administrators can still grant users privileges apart from their group privileges.
 
+The method helps to share the common access to a group specifically such as access for HR operations to HR department(group) alone.
 
 <h4>Auth Profile</h4>
-Users can be authenticated into the Zero Trust platform in the following ways
+Users can be authenticated into the Zero Trust platform in the following ways,<br>
+
+1. Primary authentication<br>
+2. Secondary authentication<br>
+	
 The primary authentication mode can be any of the following
-Password
-A username password can be used to authenticate a user into the platform. The admin need only add the user into the system, the password confirmation can be done from the side of the end user.
-SAML
-Instasafe Zero Trust can act as a SAML Service Provider to utilize any third party IDPs to log users into the system. 
-Both IDP Initiated and SP Initiated modes of SAML Authentication are supported by the ZTAA platform
-AD
-Companies with existing Active Directories can add their servers to the platform and ZTAA will contact the AD server to authenticate the user’s credentials without the need to register the users into the platform. Further details about syncing the AD profiles can be found under the Directory Sync Profiles.
-OAuth
-
-
-In addition to the the primary authentication schemes, Instasafe offers several MultiFactor authentication schemes like
-OTPs, Captcha and Security Questions can be configured.
+<h5>Password</h5>
+A username password can be used to authenticate a user into the platform. The admin need to add the user at the IDP of the ZTA platform at the admin UI. The password confirmation can be done from the side of the end user againt the information present at the ZT Controller.
+	
+<h5>SAML</h5>
+Instasafe Zero Trust can act as a SAML Service Provider to utilize any third party IDPs to log users into the system. Both IDP Initiated and SP Initiated modes of SAML Authentication are supported by the ZTAA platform
+	
+<h5>AD</h5>
+Companies with existing Active Directories can add their servers to the platform and ZTAA will contact the AD server to authenticate the user’s credentials without the need to register the users individually into the platform. Further details about syncing the AD profiles can be found under the Directory Sync Profiles.
+	
+<h5>OAuth</h5>
+	
+In addition to the the primary authentication schemes, Instasafe offers several MultiFactor authentication schemes like OTPs, Captcha and Security Questions can be configured.
 
 The Session timeout i.e  the event occuring when a user does not perform any action on the platform during an interval and is subsequently logged out due to inactivity can be configured according to the company policy.
 
@@ -509,15 +514,15 @@ The user database can be synced with the existing active directory of the compan
 <h5>Applications </h5>
 
 Administrators have control over the applications and their interaction with the end users. Administrators can restrict access to certain browser features like downloads, clipboard access, can record the screen for auditing purposes and set aliases for the applications.
-The application groups supported by ZTAA are as follows
-Web Applications
-SSH
-RDP
-File Share
-Windows Application
-Android
-IOS
-Network Apps
+The application groups supported by ZTAA are as follows<br>
+Web Applications<br>
+SSH<br>
+RDP<br>
+File Share<br>
+Windows Application<br>
+Android<br>
+IOS<br>
+Network Apps<br>
 
 <h5>Devices</h5>
 Whenever a user connects to the Zero Trust Platform, the platform collects vital information about the user’s device to ensure the security posture of the device. The information collected can be reviewed and reused by the admin to make more exclusive rules to tighten the security of the network. The admin can also use this data to detect any rogue devices and actively block them right through the panel. Once blocked, the device cannot be used to access the platform when accessed from any interface on the computer. The collected data can be exported into a CSV for later review or piped into the data management system under configuration for further processing.
