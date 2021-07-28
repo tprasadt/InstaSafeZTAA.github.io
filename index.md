@@ -454,13 +454,13 @@ The ZTNA setup is complete. Users who were added in policies will be able access
 
 
 
-<h4>Admin UI</h4>
+<h2>Admin UI</h2>
 The admin ui is the place where every administrative task available to the admin can be performed on the Zero Trust Platform. The admin ui is common for both ZTAA  and ZTNA platforms. Admins can manage any number of these platforms with the help of the features provided by this UI.
 
 The admin UI is driven by a View/Edit toggle to prevent accidental deletions. Modifications to existing entities can only be made in the edit mode.
 
 
-<h4>Identity Management</h4>
+<h3>Identity Management</h3>
 This part of the console is to manage users, user groups, their authentication profiles and the level of their access on the platform. The solution helps to manage the access policies against the users and the groups.
 
 The Dashboard shows an overview of the users and some useful information at a glance.
@@ -506,13 +506,13 @@ Security Questions<br>
 
 The User session timeout i.e  the event occuring when a user does not perform any action on the platform during an interval and is subsequently logged out due to inactivity can be configured according to the company policy.
 
-<h4>Identity Provider</h4>
+<h3>Identity Provider</h3>
 For third party applications, Instasafe can act as an SAML Identity Provider and provide authenticated identities to a SAML SP to enable Single Sign On  with Instasafe’s user validation and device posture checks. This allows users to login into third party applications by a simple one click interface on the ZTAA Agent and Web Browser.
 Directory Sync Profiles
 The user database can be synced with the existing active directory of the company to assign privileges and resource access to various users/user groups. The user groups existing in the active directory can be imported into the  platform to provision resources without the need to create user groups on the platform separately.
 
-<h4>Perimeter Management</h4>
-<h5>Applications </h5>
+<h3>Perimeter Management</h3>
+<h4>Applications </h4>
 
 Administrators have control over the applications and their interaction with the end users. Administrators can restrict access to certain browser features like downloads, clipboard access, can record the screen for auditing purposes and set aliases for the applications.
 The application groups supported by ZTAA are as follows<br>
@@ -525,13 +525,13 @@ Android<br>
 IOS<br>
 Network Apps<br>
 
-<h5>Devices</h5>
+<h4>Devices</h4>
 Whenever a user connects to the Zero Trust Platform, the platform collects vital information about the user’s device to ensure the security posture of the device. The information collected can be reviewed and reused by the admin to make more exclusive rules to tighten the security of the network. The admin can also use this data to detect any rogue devices and actively block them right through the panel. Once blocked, the device cannot be used to access the platform when accessed from any interface on the computer. The collected data can be exported into a CSV for later review or piped into the data management system under configuration for further processing.
 
-<h5>Gateways</h5>
+<h4>Gateways</h4>
 As detailed in the architecture, The gateway is the policy enforcement point of the entire system. The gateway acts as the interface between the Internet and the protected network. Applications in the protected network can only be accessed through the gateway. Applications can be added and removed from the gateway dynamically.
 
-<h5>Access Policies</h5>
+<h4>Access Policies</h4>
 Access policies are one of the most important security configurations in the ZTAA platform. It is through these policies that the ideas of micro segmentation and granular access control, both cornerstones of a Zero Trust network are  achieved on the platform. 
 
 A basic access policy consists of a user and application in which case the user is allowed access to the application. By default, No user has access to an application when it is added to the gateway. An access rule including the user and the application has to be manually added to allow the user access to that application.
@@ -550,7 +550,7 @@ A complex check might look like the following image
 	
 Here, every device’s MAC address is verified with a database of known MAC Addresses and OS Version is verified to be a known operating system. Such complex checks are important when dealing with highly critical applications which might warrant that extra layer of protection.
 
-<h4>Audit</h4>
+<h3>Audit</h3>
 
 Audit provides an interface to monitor the entire Zero Trust Platform. All critical information about the users and their usage on the platform is logged and can be accessed from here.
 A myriad of data points can be exported from the platform
@@ -558,7 +558,7 @@ Recent Active Users,Gateway Status,Username Lookups,User Logins,Authentication L
 
 The data can be displayed on the portal with options to sort and search  or can be exported to a CSV for ingestion into other data analysis platforms.
 
-<h4>Configuration</h4>
+<h3>Configuration</h3>
 Data Management
 Datasets can be added into the platform to be used as reference value or values to compare existing device parameters against. 
 
