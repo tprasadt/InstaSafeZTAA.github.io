@@ -592,6 +592,6 @@ On successful addition of the application to the  gateway, you will be given a n
 The ZTNA setup is complete. Users who were added in policies will be able access the applications through the agent.  A guide for users to access applications can be found under the Getting Started section of this document.
 
 
-
-References
+<br>
+<h2>References</h2><br>
 https://cloudsecurityalliance.org/artifacts/sdp-architecture-guide-v2/
