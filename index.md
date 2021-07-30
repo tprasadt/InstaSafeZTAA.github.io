@@ -295,14 +295,15 @@ The user database can be synced with the existing active directory of the compan
 
 Administrators have control over the applications and their interaction with the end users. Administrators can restrict access to certain browser features like downloads, clipboard access, can record the screen for auditing purposes and set aliases for the applications.
 The application groups supported by ZTAA are as follows<br>
-Web Applications<br>
-SSH<br>
-RDP<br>
-File Share<br>
-Windows Application<br>
-Android<br>
-IOS<br>
-Network Apps<br>
+1. Web Applications<br>
+2. SSH<br>
+3. RDP<br>
+4. File Share<br>
+5. Windows Application<br>
+6. Android<br>
+7. IOS<br>
+8. Network Apps<br>
+9. Thick client applications
 
 <h4>Devices</h4>
 Whenever a user connects to the Zero Trust Platform, the platform collects vital information about the user’s device to ensure the security posture of the device. The information collected can be reviewed and reused by the admin to make more exclusive rules to tighten the security of the network. The admin can also use this data to detect any rogue devices and actively block them right through the panel. Once blocked, the device cannot be used to access the platform when accessed from any interface on the computer. The collected data can be exported into a CSV for later review or piped into the data management system under configuration for further processing.
