@@ -552,9 +552,8 @@ Here, every device’s MAC address is verified with a database of known MAC Addr
 
 <h3>Audit</h3>
 
-Audit provides an interface to monitor the entire Zero Trust Platform. All critical information about the users and their usage on the platform is logged and can be accessed from here.
-A myriad of data points can be exported from the platform
-Recent Active Users,Gateway Status,Username Lookups,User Logins,Authentication Logs,User Last Login,Never Loggedin,Application Access Request,Application Recordings,Session Logs,Events,T-OTP Status,Exports
+Audit provides an interface to monitor the entire Zero Trust Platform. All critical information about the users and their usage on the platform is logged and can be accessed from here.The information about user's application access timelines and log/logout helps in the company audit and route causing the incidents.
+A myriad of data points can be exported from the platform Recent Active Users,Gateway Status,Username Lookups,User Logins,Authentication Logs,User Last Login,Never Loggedin,Application Access Request,Application Recordings,Session Logs,Events,T-OTP Status,Exports
 
 The data can be displayed on the portal with options to sort and search  or can be exported to a CSV for ingestion into other data analysis platforms.
 
@@ -573,36 +572,25 @@ ZTNA can be configured to allow access to a particular virtual address space whe
 The session captures how an end user interacts with a ZTAA agent and accesses the application. The entire process is automated so that the end user has a simple one click interface to access the application.
 
 
-
-
 <h2>Getting Started - End User</h2>
 This section will be helpful for the users who are using the Instasafe Zero Trust platform for the first time to access an application, and want to learn their way around the platform.
 
-Head to the <companyname>.app.instasafe.io and login with the username and password.
-Your username and password will be provided by your IT administrator.
+<H> Downloading the InstaSafe Agent</h3>
+	
+Head to the <companyname>.app.instasafe.io and login with the username and password. Your username and password will be provided by your IT administrator.
 Once logged in with the credentials, You will be presented with the following screen
 
 <img src="images/appview.png" alt="hi" class="inline"/>
 
-Navigate to the download icon (second icon) on the menu to the left. 
-Download the agent for your operating system. 
-Install the agent and login.
+Navigate to the download icon (second icon) on the menu to the left. Download the agent for your operating system. Install the agent and login.<br>
 All the applications that you have access to will be shown on the screen
 
 <img src="images/appview.png" alt="hi" class="inline"/>
 	
 Clicking on any application will launch it within the agent.
 
-Third party applications can be accessed through the web portal by logging to the portal as well.
+Third party applications can be accessed through the web portal by logging to the portal as well. The would become a agentless mode of access and it should be configutred at the admin UI.
 
 
-
-
-
-
-
-Glossary
-Diagrams
-Documentation Diagrams
 References
 https://cloudsecurityalliance.org/artifacts/sdp-architecture-guide-v2/
