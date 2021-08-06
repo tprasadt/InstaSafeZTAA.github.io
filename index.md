@@ -45,7 +45,7 @@ Examples of client-initiated solutions are Google’s BeyondCorp InstaSafe’s A
 
 <h2>InstaSafe Zero Trust Access(ZTA)</h2>
 
-InstaSafe offers two different Zero Trust based remote access solutions merged in to one solution called Zero Trust Access. Zero Trust based Network access enable the access at IP/Network level, where as the Zero Trust Application Access enables the application access. Both of the implementation can co-exist in an installation in order to support L3/L4 network layer access (SSH/RDP/File folder access ...) and specific application access.
+ZTA follows the Client Initiated ZTNA Architecture. InstaSafe offers two different Zero Trust based remote access solutions merged in to one solution called Zero Trust Access. Zero Trust based Network access enable the access at IP/Network level, where as the Zero Trust Application Access enables the application access. Both of the implementation can co-exist in an installation in order to support L3/L4 network layer access (SSH/RDP/File folder access ...) and specific application access.
 
 Both of the methods adopts the seperate plane of data traffic for authentication and the application/server data. The user authentication and the device authictication will be carried out in terms of credentials, MFA and the security posture checks. Only the Aunthorised devices and users can send the traffic to the data plane and access the organisation's assets such as servers and Applications.
 
